@@ -7,16 +7,15 @@ import java.util.List;
 public class UserRepositoryImpl implements UserRepository {
     private final List<User> users;
 
-    {
-        users = List.of(new User("Vladimir", "Ulianov", 52),
-                new User("Iosif", "Dzugashvili", 76),
-                new User("Nikita", "Chruschev", 80),
-                new User("Leonid", "Breznev", 82));
-    }//иммитация базы данных;
+    public UserRepositoryImpl(List<User> users) {
+        this.users = users;
+    }
 
     @Override
     public User createUser(String firstname, String secondname, int age) {
-        return null;
+        User user = new User(firstname,secondname,age);
+        users.add(user);
+        return user;
     }
 
     @Override
