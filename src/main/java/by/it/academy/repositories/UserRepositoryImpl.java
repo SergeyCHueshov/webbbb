@@ -12,10 +12,9 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User createUser(String firstname, String secondname, int age) {
-        User user = new User(firstname,secondname,age);
+    public void createUser(String firstname, String secondname, String login, int age, int password) {
+        User user = new User(firstname, secondname, login, age, password);
         users.add(user);
-        return user;
     }
 
     @Override

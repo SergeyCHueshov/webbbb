@@ -14,20 +14,13 @@
 </head>
 <body>
 <table>
-    <thead>
-    <tr>
-        <th>firstname</th>
-        <th>secondname</th>
-        <th>age</th>
-    </tr>
-    </thead>
     <tbody>
+
     <c:forEach var="user" items="${users}">
         <tr>
             <td>${user.firstname}</td>
             <td>${user.secondname}</td>
             <td>${user.age}</td>
-
         </tr>
     </c:forEach>
 

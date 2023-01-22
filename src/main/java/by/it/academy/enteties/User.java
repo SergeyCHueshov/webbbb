@@ -10,6 +10,9 @@ import lombok.NoArgsConstructor;
 public class User {
     private String firstname;
     private String secondname;
+    private String login;
     private int age;
+    private int password;
+
 
 }

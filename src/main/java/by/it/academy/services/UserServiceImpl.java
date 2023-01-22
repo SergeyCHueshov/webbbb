@@ -12,8 +12,8 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     @Override
-    public void createUser(String firstname, String secondname, int age) {
-        userRepository.createUser(firstname, secondname, age);
+    public void createUser(String firstname, String secondname, String login, int age, int password) {
+        userRepository.createUser(firstname, secondname, login, age, password);
     }
 
     @Override
